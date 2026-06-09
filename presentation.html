@@ -1288,6 +1288,16 @@
                         </div>
                     </div>
                 </div>
+
+                <aside class="notes">
+                    <strong>SLIDE 1 — TITLE</strong>
+                    <ul>
+                        <li>Welcome. This talk is about engineering discipline in the age of AI coding assistants.</li>
+                        <li>I'm going to show you that the problem isn't AI — it's the absence of structure that AI exposes.</li>
+                        <li>We'll cover: a cautionary story, the data behind the problem, a three-part framework, a live demo system built spec-first, and a practical path you can start Monday.</li>
+                        <li>The framework has three practices: Systems-First Thinking, Spec-Driven Development, and AI-Assisted Execution. Each one reinforces the others.</li>
+                    </ul>
+                </aside>
             </section>
 
 
@@ -1320,6 +1330,17 @@
                         </div>
                     </div>
                 </div>
+
+                <aside class="notes">
+                    <strong>SLIDE 3 — THE STORY</strong>
+                    <ul>
+                        <li>This is a hypothetical scenario — but it represents a real, well-documented class of failure in safety-critical software.</li>
+                        <li>A developer copy-pasted a date comparison. Timezone handling was wrong for DST. No requirement specified UTC. No test covered that edge case.</li>
+                        <li>The code looked correct. Tests passed. The system looked fine. Until it wasn't.</li>
+                        <li>The root cause wasn't developer skill. It was the absence of structure: no explicit requirement, no targeted test, no traceability between intent and implementation.</li>
+                        <li>This is the pattern we are going to solve today.</li>
+                    </ul>
+                </aside>
             </section>
 
 
@@ -1381,6 +1402,17 @@
                         In regulated industries, speed without structure is not a feature. It is a liability.
                     </div>
                 </div>
+
+                <aside class="notes">
+                    <strong>SLIDE 4 — THE PROBLEM</strong>
+                    <ul>
+                        <li>The core insight: AI doesn't create bad engineering. It amplifies what's already there.</li>
+                        <li>Give an AI vague intent and it generates confident-looking code against vague intent. It looks right. It may even pass review.</li>
+                        <li>The CodeRabbit data is striking: 1.7x more issues per AI-authored pull request vs human PRs. 10.83 issues per AI PR vs 6.45 for human PRs across 470 PRs.</li>
+                        <li>2.25x more likely to have logic errors. ~2x more security issues. This is the cost of speed without structure.</li>
+                        <li>The quote captures it perfectly: AI is like a junior engineer. "Just refactor this" is not enough context. You need guardrails, rules, explicit requirements.</li>
+                    </ul>
+                </aside>
             </section>
 
 
@@ -1516,6 +1548,17 @@
                         In regulated industries, speed without structure is not a feature. It is a liability.
                     </div>
                 </div>
+
+                <aside class="notes">
+                    <strong>SLIDE 5 — THE DATA</strong>
+                    <ul>
+                        <li>Three independent data sources, all telling the same story.</li>
+                        <li>GitClear (211M changed lines, 2020-2024): Refactoring dropped from 25% to under 10% of code changes. Duplicated code blocks up 8x. Code churn — lines rewritten within 2 weeks — doubled. Engineers stopped reshaping code and started piling on top of it.</li>
+                        <li>Apiiro (Fortune 50 repos, Dec 2024-Jun 2025): Security findings climbed from baseline to 10,000+ per month. Privilege escalation paths up 322%. Architectural design flaws up 153%. These are 10-100x more expensive to fix than bugs.</li>
+                        <li>GitHub scale (2026): 14 billion commits projected — 14x all of last year. Claude Code alone: 100K to 2.5M public commits per week in 6 months. Agents are opening 17M+ PRs per month.</li>
+                        <li>The volume of AI-generated code is exploding. Without structure, the volume of problems explodes with it.</li>
+                    </ul>
+                </aside>
             </section>
 
 
@@ -1612,6 +1655,17 @@
                         </div>
                     </div>
                 </div>
+
+                <aside class="notes">
+                    <strong>SLIDE 8 — THE FRAMEWORK</strong>
+                    <ul>
+                        <li>Three mutually reinforcing practices — not a heavyweight methodology, a discipline you layer into existing workflow.</li>
+                        <li>Practice 01 — Systems-First Thinking: Before writing line one, define lifecycle context. Who are the users, what are the failure modes, what does success look like under IEC 62304 or 21 CFR Part 11?</li>
+                        <li>Practice 02 — Spec-Driven Development: Structure before syntax. The specification is the primary engineering artifact. Code is its deterministic expression. If the spec is right, the code is right by construction.</li>
+                        <li>Practice 03 — AI-Assisted Execution: AI operates within defined constraints. The spec is the AI's instruction manual AND its safety boundary. This is what separates spec-driven from vibe coding.</li>
+                        <li>Director/Contract/Executor model: Human provides intent (Director). Spec encodes that intent as an executable contract (Contract). AI implements within those bounds (Executor). The contract is the interface between human judgment and machine execution.</li>
+                    </ul>
+                </aside>
             </section>
 
 
@@ -1680,6 +1734,17 @@
                         <p style="margin:0; font-size:0.78rem; color:var(--ds-text-muted); font-style:italic;">This audit log is immutable. It IS your verification evidence under IEC 62304 and 21 CFR Part 11.</p>
                     </div>
                 </div>
+
+                <aside class="notes">
+                    <strong>SLIDE 10 — DEMO SYSTEM: MDAM</strong>
+                    <ul>
+                        <li>MDAM — Medication Dose Alert Monitor. One feature: detect an overdue dose and escalate until acknowledged.</li>
+                        <li>Simple by design. In regulated software, simplicity IS the safety property. The more moving parts, the more places for failure to hide.</li>
+                        <li>Four states: INACTIVE → ALERT_ACTIVE (at +15 min) → ALERT_ESCALATED (at +10 min more) → ACKNOWLEDGED. Every transition is explicit, typed, and logged.</li>
+                        <li>The audit log records: prior state, new state, triggering event, UTC timestamp, actor ID. This is not a nice-to-have. Under IEC 62304 and 21 CFR Part 11, this IS your verification evidence.</li>
+                        <li>Everything you're about to see — the requirements, the state engine, the tests — was generated using the spec-first workflow with SpecKit. Let me show you how it started.</li>
+                    </ul>
+                </aside>
             </section>
 
 
@@ -1736,6 +1801,17 @@
                         <strong>These requirements are AI-reviewable, AI-implementable, and AI-traceable — because they are explicit and structured.</strong>
                     </div>
                 </div>
+
+                <aside class="notes">
+                    <strong>SLIDE 11 — STEP 1: REQUIREMENTS</strong>
+                    <ul>
+                        <li>These are the actual requirements from the spec artifact generated by /speckit-specify. Not documentation after the fact — the engineering artifact that came first.</li>
+                        <li>Notice the language: SHALL. Not "should", not "might". SHALL is unambiguous, machine-readable, AI-actionable.</li>
+                        <li>REQ-001: What triggers an alert — 15-minute threshold, configurable. REQ-003: Idempotency guarantee — one ALERT_ACTIVE per dose regardless of evaluation frequency. REQ-006: Immutable audit log with every state transition detail.</li>
+                        <li>REQ-009: Fail-safe — on internal error, surface SYSTEM_ALERT, never swallow silently. REQ-010: Pure functions — deterministic behavior, identical inputs always produce identical outputs.</li>
+                        <li>These requirements drove the tests. Tests are labeled REQ-001, REQ-003, etc. The traceability is structural, not documentation. When a test fails, you know exactly which requirement is violated.</li>
+                    </ul>
+                </aside>
             </section>
 
 
@@ -1796,6 +1872,17 @@
                         </div>
                     </div>
                 </div>
+
+                <aside class="notes">
+                    <strong>SLIDE 12 — THE CORE CONTRAST</strong>
+                    <ul>
+                        <li>Same AI model. Completely different engineering approach. Completely different outcome.</li>
+                        <li>Vibe coding prompt: "Build me a medication alert system that notifies nurses when doses are late." The AI generates something that looks right — setTimeout-based timing, hardcoded email function, flag variable instead of state machine, no audit log.</li>
+                        <li>Spec-driven prompt: "Implement DoseStateEngine satisfying REQ-001 through REQ-012. Pure function. Injected timestamps. JSDoc tracing each method to requirement ID." Now the AI has a safety boundary. It knows what success looks like.</li>
+                        <li>Spec-driven output: pure function, injected timestamps (deterministic and testable), explicit typed state machine, immutable audit entry on every transition, @satisfies REQ-NNN in JSDoc, tests labeled per requirement.</li>
+                        <li>Vibe coding has a place — exploration, research, quick bug hunts. It does not have a place in systems where a timezone bug at 2:47 AM matters.</li>
+                    </ul>
+                </aside>
             </section>
 
 
@@ -1852,6 +1939,17 @@
                         <strong>AWS · GitHub · Anthropic · Independent Research — all converging: structure before syntax.</strong>
                     </div>
                 </div>
+
+                <aside class="notes">
+                    <strong>SLIDE 13 — THE ARGUMENT</strong>
+                    <ul>
+                        <li>This is not just my opinion. The industry is independently arriving at the same answer from multiple directions.</li>
+                        <li>AWS / Kiro: Amazon built spec-first workflow directly into Kiro, their flagship AI IDE. Spec-Driven Mode is a first-class feature. When AWS makes a product decision like that, they're signaling where the industry is going.</li>
+                        <li>GitHub SpecKit: Open source framework from GitHub itself. Purpose-built for spec-driven AI-assisted engineering. Works with Copilot and other AI assistants.</li>
+                        <li>Anthropic: Claude Code's plan mode and claude.md drive spec-aware code generation. The structure of the spec becomes the AI's context window architecture.</li>
+                        <li>Independent research: METR, CodeRabbit, arXiv all confirming the same pattern — structure reduces defects, structured prompts produce measurably better outputs. This is becoming the engineering consensus.</li>
+                    </ul>
+                </aside>
             </section>
 
 
@@ -1905,6 +2003,17 @@
                         <div style="font-style:italic; color:var(--ds-text-dim); margin-top:2px;">All slides and code from this talk: <strong style="color:var(--ds-teal);">github.com/justingrammens/OSN-2026</strong></div>
                     </div>
                 </div>
+
+                <aside class="notes">
+                    <strong>SLIDE 14 — THE TOOL: GITHUB SPECKIT</strong>
+                    <ul>
+                        <li>GitHub SpecKit is the practical tooling that makes this workflow repeatable. Open source, from GitHub.</li>
+                        <li>Three core artifacts that structure every project: System Context Block (system name, version, author, safety classification), REQ-NNN Requirements (SHALL language, functional + constraint + safety), Constitution (engineering invariants AI cannot violate across the session).</li>
+                        <li>The constitution is the key differentiator. It persists across the entire AI session. Every prompt you make, every file the AI touches, is governed by the constitution. You define it once and it holds.</li>
+                        <li>Everything in the MDAM demo — spec artifacts, state engine, tests by REQ, traceability matrix — was generated starting from these SpecKit artifacts. Full project is in the repo.</li>
+                        <li>github.com/justingrammens/OSN-2026 — all slides, all code, all spec artifacts available there.</li>
+                    </ul>
+                </aside>
             </section>
 
 
@@ -1992,6 +2101,17 @@
                         Same four commands. Same prompts. Every time. <strong>Repeatable by design.</strong>
                     </div>
                 </div>
+
+                <aside class="notes">
+                    <strong>SLIDE 15 — FOUR COMMANDS · THREE SCENARIOS</strong>
+                    <ul>
+                        <li>Four commands. Always in this order: /speckit-constitution → /speckit-specify → /speckit-plan → /speckit-tasks. This is the complete spec-first workflow.</li>
+                        <li>Constitution runs once per repo — it's the governing document. Specify, plan, and tasks run once per feature. After tasks, you implement by task ID: "Implement T020 from tasks.md." The AI knows exactly what to do.</li>
+                        <li>New project: run all four before writing a line of code. You'll have spec, architecture plan, and a fully sequenced task list before implementation starts. The AI has full context from day one.</li>
+                        <li>Existing project: don't try to retrofit 200,000 lines. Pick the next feature boundary. Run the four commands on that feature. New work is traceable. Old work stays as-is. The gap closes naturally over time.</li>
+                        <li>Team adoption: commit constitution.md to .specify/memory/ — it's now version-controlled. Add REQ-NNN to your PR template. Add a CI check that fails the build if a PR references no requirement. Every engineer follows spec-first automatically. No manual enforcement needed.</li>
+                    </ul>
+                </aside>
             </section>
 
 
@@ -2041,6 +2161,17 @@
                         </div>
                     </div>
                 </div>
+
+                <aside class="notes">
+                    <strong>SLIDE 18 — THREE TRUTHS (CLOSING)</strong>
+                    <ul>
+                        <li>Truth 01: AI doesn't make bad engineering good. It makes bad engineering faster. The timezone bug at 2:47 AM — AI would have generated it with more confidence and in a fraction of the time. Fix the engineering, not the AI.</li>
+                        <li>Truth 02: A spec is not bureaucracy. Bureaucracy is writing documentation after the fact to satisfy a compliance requirement. A spec is how you build fast AND right. It is the difference between moving fast and moving fast in the right direction.</li>
+                        <li>Truth 03: Traceability is not a compliance artifact. It is how you prove — to yourself, your team, your stakeholders, and your regulator — that you understood what you were building and that you built what you intended.</li>
+                        <li>All of this is in the repo: github.com/justingrammens/OSN-2026. Spec artifacts, state engine, tests by requirement, traceability matrix, these slides — everything is there. Take it, use it, adapt it.</li>
+                        <li>Thank you. Happy to take questions.</li>
+                    </ul>
+                </aside>
             </section>
 
         </div>
@@ -2049,6 +2180,7 @@
 
     <!-- Reveal.js core + plugins -->
     <script src="https://cdn.jsdelivr.net/npm/reveal.js@6.0.1/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@6.0.1/dist/plugin/notes.js"></script>
 
     <script>
         /* =====================================================================
@@ -2072,7 +2204,7 @@
                 height: 720,
                 minScale: 0.2,
                 maxScale: 2.0,
-                plugins: []
+                plugins: [RevealNotes]
             });
 
             if (!STARFIELD_ENABLED) return;
