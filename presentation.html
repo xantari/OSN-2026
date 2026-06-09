@@ -1385,194 +1385,135 @@
 
 
             <!-- ================================================================
-             SLIDE 5 — THE PRODUCTIVITY PARADOX
+             SLIDE 5 — THE DATA
         ================================================================ -->
             <section>
-                <div class="slide-inner" style="padding-top:38px;">
+                <div class="slide-inner" style="padding-top:28px;">
                     <div class="slide-header">
-                        <div class="eyebrow">THE PRODUCTIVITY PARADOX</div>
-                        <h2>Speed Goes Up. Quality Quietly Collapses.</h2>
+                        <div class="eyebrow">THE DATA</div>
+                        <h2>More Code. More Churn. More Risk.</h2>
                     </div>
-                    <hr class="ds-rule" />
+                    <hr class="ds-rule" style="margin-bottom:10px;" />
 
-                    <div class="ds-card" style="background:rgba(13,33,55,0.9); flex:1; display:flex; flex-direction:column; padding:20px 24px;">
-                        <div style="font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ds-text-dim); margin-bottom:18px;">GITCLEAR · 211 MILLION LINES OF CODE · 2020 – 2024</div>
+                    <div class="cols-3" style="flex:1; gap:12px;">
 
-                        <div class="cols-3" style="flex:1; gap:14px;">
-                            <!-- Refactoring -->
-                            <div class="ds-card" style="padding:16px 18px; background:rgba(255,255,255,0.03);">
-                                <div style="font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ds-text-dim); margin-bottom:10px;">REFACTORING (HEALTHY CHANGES)</div>
-                                <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
-                                    <span style="font-size:1.8rem; color:#EF4444;">↓</span>
-                                    <span class="stat-num red" style="font-size:2.4rem;">−60%</span>
+                        <!-- Column 1: Quality Collapse -->
+                        <div class="ds-card" style="background:rgba(13,33,55,0.9); display:flex; flex-direction:column; gap:0; padding:16px 18px;">
+                            <div style="font-size:0.58rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ds-text-dim); margin-bottom:10px;">QUALITY COLLAPSE · GITCLEAR · 2020–2024</div>
+
+                            <div style="padding:10px 0; border-bottom:1px solid var(--ds-border);">
+                                <div style="font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ds-text-dim); margin-bottom:6px;">REFACTORING (HEALTHY CHANGES)</div>
+                                <div style="display:flex; align-items:center; gap:6px; margin-bottom:4px;">
+                                    <span style="font-size:1.4rem; color:#EF4444;">↓</span>
+                                    <span class="stat-num red" style="font-size:2rem;">−60%</span>
                                 </div>
-                                <div style="font-size:0.78rem; color:var(--ds-teal); font-weight:600; margin-bottom:8px;">25% → under 10%</div>
-                                <p style="font-size:0.72rem; color:var(--ds-text-muted); margin:0 0 8px; line-height:1.5;">Refactoring's share of code changes more than halved between 2021 and 2024.</p>
-                                <p style="font-size:0.72rem; color:var(--ds-text-muted); margin:0; line-height:1.5;">Engineers stopped reshaping existing code. They added new lines on top of it.</p>
+                                <div style="font-size:0.72rem; color:var(--ds-teal); font-weight:600; margin-bottom:4px;">25% → under 10%</div>
+                                <p style="font-size:0.68rem; color:var(--ds-text-muted); margin:0 0 4px; line-height:1.4;">Refactoring's share of code changes more than halved between 2021 and 2024.</p>
+                                <p style="font-size:0.68rem; color:var(--ds-text-muted); margin:0; line-height:1.4;">Engineers stopped reshaping existing code. They added new lines on top of it.</p>
                             </div>
 
-                            <!-- Duplicated code -->
-                            <div class="ds-card" style="padding:16px 18px; background:rgba(255,255,255,0.03);">
-                                <div style="font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ds-text-dim); margin-bottom:10px;">DUPLICATED CODE BLOCKS</div>
-                                <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
-                                    <span style="font-size:1.8rem; color:#EF4444;">↑</span>
-                                    <span class="stat-num red" style="font-size:2.4rem;">8×</span>
+                            <div style="padding:10px 0; border-bottom:1px solid var(--ds-border);">
+                                <div style="font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ds-text-dim); margin-bottom:6px;">DUPLICATED CODE BLOCKS</div>
+                                <div style="display:flex; align-items:center; gap:6px; margin-bottom:4px;">
+                                    <span style="font-size:1.4rem; color:#EF4444;">↑</span>
+                                    <span class="stat-num red" style="font-size:2rem;">8×</span>
                                 </div>
-                                <div style="font-size:0.78rem; color:var(--ds-teal); font-weight:600; margin-bottom:8px;">Copy-pasted code: 8.3% → 12.3%</div>
-                                <p style="font-size:0.72rem; color:var(--ds-text-muted); margin:0 0 8px; line-height:1.5;">Eightfold rise in duplicated blocks — the first year copy-paste outpaced reuse.</p>
-                                <p style="font-size:0.72rem; color:var(--ds-text-muted); margin:0; line-height:1.5;">DRY violations multiply maintenance cost and propagate the same bug to every clone.</p>
+                                <div style="font-size:0.72rem; color:var(--ds-teal); font-weight:600; margin-bottom:4px;">Copy-pasted code: 8.3% → 12.3%</div>
+                                <p style="font-size:0.68rem; color:var(--ds-text-muted); margin:0; line-height:1.4;">DRY violations multiply maintenance cost and propagate the same bug to every clone.</p>
                             </div>
 
-                            <!-- Code churn -->
-                            <div class="ds-card" style="padding:16px 18px; background:rgba(255,255,255,0.03);">
-                                <div style="font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ds-text-dim); margin-bottom:10px;">CODE CHURN (REWRITTEN &lt; 2 WEEKS)</div>
-                                <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
-                                    <span style="font-size:1.8rem; color:#EF4444;">↑</span>
-                                    <span class="stat-num red" style="font-size:2.4rem;">2×</span>
+                            <div style="padding:10px 0;">
+                                <div style="font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ds-text-dim); margin-bottom:6px;">CODE CHURN (REWRITTEN &lt; 2 WEEKS)</div>
+                                <div style="display:flex; align-items:center; gap:6px; margin-bottom:4px;">
+                                    <span style="font-size:1.4rem; color:#EF4444;">↑</span>
+                                    <span class="stat-num red" style="font-size:2rem;">2×</span>
                                 </div>
-                                <div style="font-size:0.78rem; color:var(--ds-teal); font-weight:600; margin-bottom:8px;">3.1% (2020) → 5.7%+ (2024)</div>
-                                <p style="font-size:0.72rem; color:var(--ds-text-muted); margin:0 0 8px; line-height:1.5;">Code rewritten or reverted within two weeks nearly doubled — a leading defect signal.</p>
-                                <p style="font-size:0.72rem; color:var(--ds-text-muted); margin:0; line-height:1.5;">More "almost right" code. More rework. Productivity gain absorbed by repair cost.</p>
+                                <div style="font-size:0.72rem; color:var(--ds-teal); font-weight:600; margin-bottom:4px;">3.1% (2020) → 5.7%+ (2024)</div>
+                                <p style="font-size:0.68rem; color:var(--ds-text-muted); margin:0; line-height:1.4;">More "almost right" code. More rework. Productivity gain absorbed by repair cost.</p>
                             </div>
+
+                            <div style="font-size:0.58rem; color:var(--ds-text-dim); margin-top:auto; padding-top:6px; border-top:1px solid var(--ds-border);">GitClear, "AI Copilot Code Quality: 2025 Research" — 211M changed lines, thousands of repos (Jan 2020 – Dec 2024).</div>
                         </div>
 
-                        <div class="source-line">Source: GitClear, "AI Copilot Code Quality: 2025 Research" — 211M changed lines, thousands of repos (Jan 2020 – Dec 2024). Echoed by Google's DORA 2024 report and CodeRabbit's 2025 PR analysis.</div>
-                    </div>
-                </div>
-            </section>
+                        <!-- Column 2: Security -->
+                        <div class="ds-card" style="background:rgba(13,33,55,0.9); display:flex; flex-direction:column; gap:0; padding:16px 18px;">
+                            <div style="font-size:0.58rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ds-text-dim); margin-bottom:10px;">SECURITY SURGE · APIIRO · DEC 2024–JUN 2025</div>
 
-
-            <!-- ================================================================
-             SLIDE 6 — SECURITY IS A CONCERN
-        ================================================================ -->
-            <section>
-                <div class="slide-inner" style="padding-top:38px;">
-                    <div class="slide-header">
-                        <div class="eyebrow">SECURITY IS A CONCERN</div>
-                        <h2>Vulnerabilities Double in One Year</h2>
-                    </div>
-                    <hr class="ds-rule" />
-
-                    <div class="ds-card" style="background:rgba(13,33,55,0.9); flex:1; display:flex; flex-direction:column; padding:20px 24px;">
-                        <div style="font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ds-text-dim); margin-bottom:18px;">APIIRO · FORTUNE 50 ENTERPRISE STUDY · DEC 2024 – JUN 2025</div>
-
-                        <div style="display:flex; gap:28px; flex:1;">
-                            <!-- Big stat -->
-                            <div style="display:flex; flex-direction:column; justify-content:center; align-items:flex-start; width:200px; flex-shrink:0;">
-                                <div class="stat-num red" style="font-size:5rem; letter-spacing:-0.04em;">10×</div>
-                                <div style="font-size:0.82rem; font-weight:600; color:var(--ds-text); margin-top:4px;">surge in security findings</div>
-                                <div style="font-size:0.72rem; color:var(--ds-text-muted); margin-top:8px; line-height:1.55;">Monthly findings climbed from a baseline in December 2024 to over 10,000 per month by June 2025 — a 10× increase in just six months.</div>
+                            <div style="padding:10px 0; border-bottom:1px solid var(--ds-border);">
+                                <div style="font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ds-text-dim); margin-bottom:6px;">MONTHLY SECURITY FINDINGS</div>
+                                <div class="stat-num red" style="font-size:2rem; margin-bottom:4px;">10×</div>
+                                <div style="font-size:0.72rem; color:var(--ds-teal); font-weight:600; margin-bottom:4px;">surge in security findings</div>
+                                <p style="font-size:0.68rem; color:var(--ds-text-muted); margin:0; line-height:1.4;">Monthly findings climbed from a baseline in Dec 2024 to over 10,000 per month by June 2025 — in just six months.</p>
                             </div>
 
-                            <div style="width:1px; background:var(--ds-border); flex-shrink:0;"></div>
-
-                            <!-- Right: risk rows -->
-                            <div style="flex:1; display:flex; flex-direction:column; gap:14px; justify-content:center;">
-                                <div style="font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ds-text-dim); margin-bottom:4px;">WHERE THE RISK IS COMPOUNDING</div>
-
-                                <div style="display:flex; align-items:center; gap:14px;">
-                                    <div style="font-size:1.6rem; font-weight:800; color:#EF4444; width:90px; flex-shrink:0;">+322%</div>
-                                    <div>
-                                        <div style="font-size:0.82rem; font-weight:700; color:var(--ds-text);">Privilege-escalation paths</div>
-                                        <div style="font-size:0.72rem; color:var(--ds-text-muted);">Auth checks without authorization checks.</div>
-                                    </div>
-                                </div>
-
-                                <div style="display:flex; align-items:center; gap:14px;">
-                                    <div style="font-size:1.6rem; font-weight:800; color:#EF4444; width:90px; flex-shrink:0;">+153%</div>
-                                    <div>
-                                        <div style="font-size:0.82rem; font-weight:700; color:var(--ds-text);">Architectural design flaws</div>
-                                        <div style="font-size:0.72rem; color:var(--ds-text-muted);">10–100× more expensive to remediate than bugs.</div>
-                                    </div>
-                                </div>
-
-                                <div style="display:flex; align-items:center; gap:14px;">
-                                    <div style="font-size:1.6rem; font-weight:800; color:#EF4444; width:90px; flex-shrink:0;">2.74×</div>
-                                    <div>
-                                        <div style="font-size:0.82rem; font-weight:700; color:var(--ds-text);">More vulnerabilities per 1,000 LOC</div>
-                                        <div style="font-size:0.72rem; color:var(--ds-text-muted);">Veracode tested 100+ LLMs · 45% security failure rate.</div>
-                                    </div>
-                                </div>
-
-                                <div style="display:flex; align-items:center; gap:14px;">
-                                    <div style="font-size:1.6rem; font-weight:800; color:#EF4444; width:90px; flex-shrink:0;">+40%</div>
-                                    <div>
-                                        <div style="font-size:0.82rem; font-weight:700; color:var(--ds-text);">Repos with exposed secrets</div>
-                                        <div style="font-size:0.72rem; color:var(--ds-text-muted);">Hardcoded credentials, API keys, tokens.</div>
-                                    </div>
-                                </div>
+                            <div style="padding:10px 0; border-bottom:1px solid var(--ds-border);">
+                                <div style="font-size:1.3rem; font-weight:800; color:#EF4444; margin-bottom:2px;">+322%</div>
+                                <div style="font-size:0.72rem; font-weight:700; color:var(--ds-text); margin-bottom:2px;">Privilege-escalation paths</div>
+                                <p style="font-size:0.68rem; color:var(--ds-text-muted); margin:0; line-height:1.4;">Auth checks without authorization checks.</p>
                             </div>
+
+                            <div style="padding:10px 0; border-bottom:1px solid var(--ds-border);">
+                                <div style="font-size:1.3rem; font-weight:800; color:#EF4444; margin-bottom:2px;">+153%</div>
+                                <div style="font-size:0.72rem; font-weight:700; color:var(--ds-text); margin-bottom:2px;">Architectural design flaws</div>
+                                <p style="font-size:0.68rem; color:var(--ds-text-muted); margin:0; line-height:1.4;">10–100× more expensive to remediate than bugs.</p>
+                            </div>
+
+                            <div style="padding:10px 0; border-bottom:1px solid var(--ds-border);">
+                                <div style="font-size:1.3rem; font-weight:800; color:#EF4444; margin-bottom:2px;">2.74×</div>
+                                <div style="font-size:0.72rem; font-weight:700; color:var(--ds-text); margin-bottom:2px;">More vulnerabilities per 1,000 LOC</div>
+                                <p style="font-size:0.68rem; color:var(--ds-text-muted); margin:0; line-height:1.4;">Veracode tested 100+ LLMs · 45% security failure rate.</p>
+                            </div>
+
+                            <div style="padding:10px 0;">
+                                <div style="font-size:1.3rem; font-weight:800; color:#EF4444; margin-bottom:2px;">+40%</div>
+                                <div style="font-size:0.72rem; font-weight:700; color:var(--ds-text); margin-bottom:2px;">Repos with exposed secrets</div>
+                                <p style="font-size:0.68rem; color:var(--ds-text-muted); margin:0; line-height:1.4;">Hardcoded credentials, API keys, tokens.</p>
+                            </div>
+
+                            <div style="font-size:0.58rem; color:var(--ds-text-dim); margin-top:auto; padding-top:6px; border-top:1px solid var(--ds-border);">Apiiro, "4× Velocity, 10× Vulnerabilities" — Fortune 50 repos (2025) · Veracode, "GenAI Code Security Report" (2025).</div>
                         </div>
 
-                        <div class="source-line">Sources: Apiiro, "4× Velocity, 10× Vulnerabilities" — Deep Code Analysis across tens of thousands of Fortune 50 repos (2025) · Veracode, "GenAI Code Security Report" (2025).</div>
-                    </div>
-                </div>
-            </section>
+                        <!-- Column 3: Scale -->
+                        <div class="ds-card" style="background:rgba(13,33,55,0.9); display:flex; flex-direction:column; gap:0; padding:16px 18px;">
+                            <div style="font-size:0.58rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ds-text-dim); margin-bottom:10px;">SCALE OF THE PROBLEM · GITHUB · 2026</div>
 
-
-            <!-- ================================================================
-             SLIDE 7 — THE SCALE OF THE PROBLEM
-        ================================================================ -->
-            <section>
-                <div class="slide-inner" style="padding-top:38px;">
-                    <div class="slide-header">
-                        <div class="eyebrow">THE SCALE OF THE PROBLEM</div>
-                        <h2>More Code Shipped This Quarter Than All of Last Year</h2>
-                    </div>
-                    <hr class="ds-rule" />
-
-                    <div class="ds-card" style="background:rgba(13,33,55,0.9); flex:1; display:flex; flex-direction:column; padding:20px 24px;">
-                        <div style="font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ds-text-dim); margin-bottom:18px;">GITHUB PLATFORM DATA · CONFIRMED BY COO KYLE DAIGLE · 2026</div>
-
-                        <div style="display:flex; gap:28px; flex:1;">
-                            <!-- Big stat -->
-                            <div style="display:flex; flex-direction:column; justify-content:center; align-items:flex-start; width:200px; flex-shrink:0;">
-                                <div class="stat-num red" style="font-size:5rem; letter-spacing:-0.04em;">14×</div>
-                                <div style="font-size:0.82rem; font-weight:600; color:var(--ds-text); margin-top:4px;">more commits than all of last year</div>
-                                <div style="font-size:0.72rem; color:var(--ds-text-muted); margin-top:8px; line-height:1.55;">GitHub absorbed ~1 billion commits in all of 2025. The platform is now on pace for 14 billion in 2026 — 275 million per week.</div>
+                            <div style="padding:10px 0; border-bottom:1px solid var(--ds-border);">
+                                <div class="stat-num red" style="font-size:2rem; margin-bottom:4px;">14×</div>
+                                <div style="font-size:0.72rem; color:var(--ds-teal); font-weight:600; margin-bottom:4px;">more commits than all of last year</div>
+                                <p style="font-size:0.68rem; color:var(--ds-text-muted); margin:0; line-height:1.4;">GitHub absorbed ~1 billion commits in all of 2025. The platform is now on pace for 14 billion in 2026 — 275 million per week.</p>
                             </div>
 
-                            <div style="width:1px; background:var(--ds-border); flex-shrink:0;"></div>
-
-                            <!-- Right: drivers -->
-                            <div style="flex:1; display:flex; flex-direction:column; gap:14px; justify-content:center;">
-                                <div style="font-size:0.62rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ds-text-dim); margin-bottom:4px;">WHAT'S DRIVING THE SURGE</div>
-
-                                <div style="display:flex; align-items:center; gap:14px;">
-                                    <div style="font-size:1.6rem; font-weight:800; color:#EF4444; width:80px; flex-shrink:0;">25×</div>
-                                    <div>
-                                        <div style="font-size:0.82rem; font-weight:700; color:var(--ds-text);">Claude Code commits in 6 months</div>
-                                        <div style="font-size:0.72rem; color:var(--ds-text-muted);">100K → 2.5M public commits per week.</div>
-                                    </div>
-                                </div>
-
-                                <div style="display:flex; align-items:center; gap:14px;">
-                                    <div style="font-size:1.6rem; font-weight:800; color:#EF4444; width:80px; flex-shrink:0;">4×</div>
-                                    <div>
-                                        <div style="font-size:0.82rem; font-weight:700; color:var(--ds-text);">AI-agent pull requests since Sept '25</div>
-                                        <div style="font-size:0.72rem; color:var(--ds-text-muted);">4M → 17M+ PRs/month opened by autonomous agents.</div>
-                                    </div>
-                                </div>
-
-                                <div style="display:flex; align-items:center; gap:14px;">
-                                    <div style="font-size:1.6rem; font-weight:800; color:#EF4444; width:80px; flex-shrink:0;">~4%</div>
-                                    <div>
-                                        <div style="font-size:0.82rem; font-weight:700; color:var(--ds-text);">of all public commits — Claude Code alone</div>
-                                        <div style="font-size:0.72rem; color:var(--ds-text-muted);">Projected to hit 20%+ of daily commits by year-end.</div>
-                                    </div>
-                                </div>
-
-                                <div style="display:flex; align-items:center; gap:14px;">
-                                    <div style="font-size:1.6rem; font-weight:800; color:#EF4444; width:80px; flex-shrink:0;">2.1B</div>
-                                    <div>
-                                        <div style="font-size:0.82rem; font-weight:700; color:var(--ds-text);">CI/CD compute minutes in a single week</div>
-                                        <div style="font-size:0.72rem; color:var(--ds-text-muted);">Up from 500M in 2023 — agents iterate at machine speed.</div>
-                                    </div>
-                                </div>
+                            <div style="padding:10px 0; border-bottom:1px solid var(--ds-border);">
+                                <div style="font-size:1.3rem; font-weight:800; color:#EF4444; margin-bottom:2px;">25×</div>
+                                <div style="font-size:0.72rem; font-weight:700; color:var(--ds-text); margin-bottom:2px;">Claude Code commits in 6 months</div>
+                                <p style="font-size:0.68rem; color:var(--ds-text-muted); margin:0; line-height:1.4;">100K → 2.5M public commits per week.</p>
                             </div>
+
+                            <div style="padding:10px 0; border-bottom:1px solid var(--ds-border);">
+                                <div style="font-size:1.3rem; font-weight:800; color:#EF4444; margin-bottom:2px;">4×</div>
+                                <div style="font-size:0.72rem; font-weight:700; color:var(--ds-text); margin-bottom:2px;">AI-agent pull requests since Sept '25</div>
+                                <p style="font-size:0.68rem; color:var(--ds-text-muted); margin:0; line-height:1.4;">4M → 17M+ PRs/month opened by autonomous agents.</p>
+                            </div>
+
+                            <div style="padding:10px 0; border-bottom:1px solid var(--ds-border);">
+                                <div style="font-size:1.3rem; font-weight:800; color:#EF4444; margin-bottom:2px;">~4%</div>
+                                <div style="font-size:0.72rem; font-weight:700; color:var(--ds-text); margin-bottom:2px;">of all public commits — Claude Code alone</div>
+                                <p style="font-size:0.68rem; color:var(--ds-text-muted); margin:0; line-height:1.4;">Projected to hit 20%+ of daily commits by year-end.</p>
+                            </div>
+
+                            <div style="padding:10px 0;">
+                                <div style="font-size:1.3rem; font-weight:800; color:#EF4444; margin-bottom:2px;">2.1B</div>
+                                <div style="font-size:0.72rem; font-weight:700; color:var(--ds-text); margin-bottom:2px;">CI/CD compute minutes in a single week</div>
+                                <p style="font-size:0.68rem; color:var(--ds-text-muted); margin:0; line-height:1.4;">Up from 500M in 2023 — agents iterate at machine speed.</p>
+                            </div>
+
+                            <div style="font-size:0.58rem; color:var(--ds-text-dim); margin-top:auto; padding-top:6px; border-top:1px solid var(--ds-border);">GitHub COO Kyle Daigle (2026) · The Information · SemiAnalysis · Tomasz Tunguz infrastructure analysis (Apr 2026).</div>
                         </div>
 
-                        <div class="source-line">Sources: GitHub COO Kyle Daigle (public statement, 2026) · The Information · SemiAnalysis, "Claude Code GitHub Commit Analysis" (Feb 2026) · Tomasz Tunguz infrastructure analysis (Apr 2026).</div>
+                    </div>
+
+                    <div style="margin-top:10px; text-align:center; font-size:0.82rem; font-weight:700; font-style:italic; color:#EF4444;">
+                        In regulated industries, speed without structure is not a feature. It is a liability.
                     </div>
                 </div>
             </section>
