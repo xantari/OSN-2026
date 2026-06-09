@@ -1523,113 +1523,93 @@
              SLIDE 8 — THE FRAMEWORK
         ================================================================ -->
             <section>
-                <div class="slide-inner" style="padding-top:38px;">
+                <div class="slide-inner" style="padding-top:28px;">
                     <div class="slide-header">
-                        <div class="eyebrow">THE FRAMEWORK</div>
+                        <div class="eyebrow">T H E F R A M E W O R K</div>
                         <h2>Three Practices. One Disciplined Engineering Model.</h2>
                     </div>
-                    <hr class="ds-rule" />
+                    <hr class="ds-rule" style="margin-bottom:10px;" />
 
-                    <div class="cols-3" style="gap:14px;">
-                        <div class="fw-card col1">
-                            <div class="fw-num" style="color:var(--ds-teal);">01</div>
+                    <!-- Three pillars top row -->
+                    <div class="cols-3" style="gap:12px; flex:none;">
+                        <div class="fw-card col1" style="padding:14px 16px;">
+                            <div class="fw-num" style="color:var(--ds-teal); font-size:1.2rem;">01</div>
                             <div class="fw-label">Systems-First</div>
-                            <div class="fw-title">SYSTEMS-FIRST<br />ENGINEERING</div>
-                            <div class="fw-desc">Connect every decision to the full system lifecycle — from requirement to design to verification to post-deployment evolution.</div>
+                            <div class="fw-title" style="font-size:0.78rem;">SYSTEMS-FIRST<br />ENGINEERING</div>
+                            <div class="fw-desc" style="font-size:0.72rem;">Connect every decision to the full system lifecycle — from requirement to design to verification to post-deployment evolution.</div>
                             <hr />
-                            <ul class="fw-bullets">
+                            <ul class="fw-bullets" style="font-size:0.7rem;">
                                 <li>Risk-driven requirements</li>
                                 <li>Architectural integrity over time</li>
                             </ul>
                         </div>
 
-                        <div class="fw-card col2">
-                            <div class="fw-num" style="color:var(--ds-cyan);">02</div>
+                        <div class="fw-card col2" style="padding:14px 16px;">
+                            <div class="fw-num" style="color:var(--ds-cyan); font-size:1.2rem;">02</div>
                             <div class="fw-label">Spec-Driven</div>
-                            <div class="fw-title">SPEC-DRIVEN<br />DEVELOPMENT</div>
-                            <div class="fw-desc">Structure before syntax. The specification is the primary engineering artifact. Code is its deterministic expression.</div>
+                            <div class="fw-title" style="font-size:0.78rem;">SPEC-DRIVEN<br />DEVELOPMENT</div>
+                            <div class="fw-desc" style="font-size:0.72rem;">Structure before syntax. The specification is the primary engineering artifact. Code is its deterministic expression.</div>
                             <hr />
-                            <ul class="fw-bullets">
+                            <ul class="fw-bullets" style="font-size:0.7rem;">
                                 <li>REQ-NNN format requirements</li>
                                 <li>Behavior modeled before code</li>
                             </ul>
                         </div>
 
-                        <div class="fw-card col3">
-                            <div class="fw-num" style="color:var(--ds-green);">03</div>
+                        <div class="fw-card col3" style="padding:14px 16px;">
+                            <div class="fw-num" style="color:var(--ds-green); font-size:1.2rem;">03</div>
                             <div class="fw-label">AI-Assisted</div>
-                            <div class="fw-title">AI-ASSISTED<br />EXECUTION</div>
-                            <div class="fw-desc">AI operates within defined constraints — not instead of them. The spec is the AI's instruction manual and its safety boundary.</div>
+                            <div class="fw-title" style="font-size:0.78rem;">AI-ASSISTED<br />EXECUTION</div>
+                            <div class="fw-desc" style="font-size:0.72rem;">AI operates within defined constraints — not instead of them. The spec is the AI's instruction manual and its safety boundary.</div>
                             <hr />
-                            <ul class="fw-bullets">
+                            <ul class="fw-bullets" style="font-size:0.7rem;">
                                 <li>Requirement-aware code generation</li>
                                 <li>Traced test generation by REQ</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="info-bar" style="margin-top:16px; text-align:center;">
-                        Director (human intent) → Contract (executable spec) → <strong>Executor (AI within bounds)</strong>
-                    </div>
-                </div>
-            </section>
-
-
-            <!-- ================================================================
-             SLIDE 9 — DIRECTOR, CONTRACT, EXECUTOR
-        ================================================================ -->
-            <section>
-                <div class="slide-inner" style="padding-top:38px; background:#fff;">
-                    <div class="slide-header" style="position:relative; z-index:2;">
-                        <div class="eyebrow" style="color:var(--ds-teal);">THE FRAMEWORK</div>
-                        <h2 style="color:#111 !important;">Director, Contract, Executor.</h2>
-                    </div>
-
-                    <!-- Venn-style diagram via CSS -->
-                    <div style="flex:1; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative;">
-                        <div style="position:relative; width:700px; height:300px;">
+                    <!-- Director / Contract / Executor Venn diagram -->
+                    <div style="flex:1; display:flex; flex-direction:column; justify-content:center; align-items:center; position:relative; margin-top:10px;">
+                        <div style="position:relative; width:660px; height:220px;">
                             <!-- Director circle -->
-                            <div style="position:absolute; left:60px; top:10px; width:300px; height:280px; border-radius:50%; background:rgba(45,212,191,0.18); border:2px solid rgba(45,212,191,0.5);"></div>
+                            <div style="position:absolute; left:40px; top:5px; width:260px; height:210px; border-radius:50%; background:rgba(45,212,191,0.15); border:2px solid rgba(45,212,191,0.5);"></div>
                             <!-- Executor circle -->
-                            <div style="position:absolute; left:340px; top:10px; width:300px; height:280px; border-radius:50%; background:rgba(74,222,128,0.18); border:2px solid rgba(74,222,128,0.5);"></div>
+                            <div style="position:absolute; left:360px; top:5px; width:260px; height:210px; border-radius:50%; background:rgba(74,222,128,0.15); border:2px solid rgba(74,222,128,0.5);"></div>
 
                             <!-- Director text -->
-                            <div style="position:absolute; left:80px; top:60px; width:200px; text-align:center; color:#111;">
-                                <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:4px; color:#0D6E6A;">D I R E C T O R</div>
-                                <div style="font-size:0.78rem; font-style:italic; color:#444; margin-bottom:12px;">Human Intent</div>
+                            <div style="position:absolute; left:55px; top:45px; width:175px; text-align:center; color:var(--ds-text);">
+                                <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:4px; color:var(--ds-teal);">DIRECTOR</div>
+                                <div style="font-size:0.7rem; font-style:italic; color:var(--ds-text-muted); margin-bottom:8px;">Human Intent</div>
                                 <ul style="list-style:none; padding:0; margin:0; text-align:left;">
-                                    <li style="font-size:0.72rem; color:#333; margin-bottom:4px; display:flex; gap:6px;"><span style="color:#0D6E6A;">▸</span> Defines requirements</li>
-                                    <li style="font-size:0.72rem; color:#333; margin-bottom:4px; display:flex; gap:6px;"><span style="color:#0D6E6A;">▸</span> Sets constraints</li>
-                                    <li style="font-size:0.72rem; color:#333; display:flex; gap:6px;"><span style="color:#0D6E6A;">▸</span> Owns outcomes</li>
+                                    <li style="font-size:0.68rem; color:var(--ds-text-muted); margin-bottom:3px; display:flex; gap:5px;"><span style="color:var(--ds-teal);">▸</span> Defines requirements</li>
+                                    <li style="font-size:0.68rem; color:var(--ds-text-muted); margin-bottom:3px; display:flex; gap:5px;"><span style="color:var(--ds-teal);">▸</span> Sets constraints</li>
+                                    <li style="font-size:0.68rem; color:var(--ds-text-muted); display:flex; gap:5px;"><span style="color:var(--ds-teal);">▸</span> Owns outcomes</li>
                                 </ul>
                             </div>
 
                             <!-- Executor text -->
-                            <div style="position:absolute; right:80px; top:60px; width:200px; text-align:center; color:#111;">
-                                <div style="font-size:0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:4px; color:#166534;">E X E C U T O R</div>
-                                <div style="font-size:0.78rem; font-style:italic; color:#444; margin-bottom:12px;">AI Within Bounds</div>
+                            <div style="position:absolute; right:55px; top:45px; width:175px; text-align:center; color:var(--ds-text);">
+                                <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:4px; color:var(--ds-green);">EXECUTOR</div>
+                                <div style="font-size:0.7rem; font-style:italic; color:var(--ds-text-muted); margin-bottom:8px;">AI Within Bounds</div>
                                 <ul style="list-style:none; padding:0; margin:0; text-align:left;">
-                                    <li style="font-size:0.72rem; color:#333; margin-bottom:4px; display:flex; gap:6px;"><span style="color:#166534;">▸</span> Generates code</li>
-                                    <li style="font-size:0.72rem; color:#333; margin-bottom:4px; display:flex; gap:6px;"><span style="color:#166534;">▸</span> Operates in context</li>
-                                    <li style="font-size:0.72rem; color:#333; display:flex; gap:6px;"><span style="color:#166534;">▸</span> Bounded by spec</li>
+                                    <li style="font-size:0.68rem; color:var(--ds-text-muted); margin-bottom:3px; display:flex; gap:5px;"><span style="color:var(--ds-green);">▸</span> Generates code</li>
+                                    <li style="font-size:0.68rem; color:var(--ds-text-muted); margin-bottom:3px; display:flex; gap:5px;"><span style="color:var(--ds-green);">▸</span> Operates in context</li>
+                                    <li style="font-size:0.68rem; color:var(--ds-text-muted); display:flex; gap:5px;"><span style="color:var(--ds-green);">▸</span> Bounded by spec</li>
                                 </ul>
                             </div>
 
                             <!-- Contract center box -->
-                            <div style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); background:#fff; border:2px solid #ccc; border-radius:8px; padding:14px 16px; width:136px; text-align:center; box-shadow:0 4px 20px rgba(0,0,0,0.15); z-index:3;">
-                                <div style="font-size:0.6rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#777; margin-bottom:4px;">C O N T R A C T</div>
-                                <div style="font-size:1.0rem; font-weight:700; color:#111; margin-bottom:6px;">Specification</div>
-                                <div style="font-size:0.7rem; color:#555; line-height:1.5;">Executable.<br />Testable.<br />Traceable.</div>
+                            <div style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); background:rgba(13,33,55,0.95); border:2px solid rgba(255,255,255,0.3); border-radius:8px; padding:10px 14px; width:120px; text-align:center; box-shadow:0 4px 20px rgba(0,0,0,0.4); z-index:3;">
+                                <div style="font-size:0.55rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--ds-text-dim); margin-bottom:3px;">CONTRACT</div>
+                                <div style="font-size:0.9rem; font-weight:700; color:var(--ds-text); margin-bottom:4px;">Specification</div>
+                                <div style="font-size:0.65rem; color:var(--ds-text-muted); line-height:1.4;">Executable.<br />Testable.<br />Traceable.</div>
                             </div>
                         </div>
 
-                        <div style="font-size:1.2rem; font-weight:700; color:#111; margin-top:10px;">
-                            The spec is the contract that binds them.
+                        <div class="info-bar" style="width:100%; text-align:center; margin-top:8px; font-size:0.76rem;">
+                            Director (human intent) &nbsp;→&nbsp; <strong style="color:var(--ds-teal);">Contract (executable spec)</strong> &nbsp;→&nbsp; Executor (AI within bounds)
                         </div>
-                    </div>
-
-                    <div style="background:rgba(240,240,240,0.9); border-radius:8px; padding:10px 18px; text-align:center; font-size:0.78rem; color:#444;">
-                        Director (human intent) → <strong style="color:#0D6E6A;">Contract (executable spec)</strong> → Executor (AI within bounds)
                     </div>
                 </div>
             </section>
