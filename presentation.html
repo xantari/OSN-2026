@@ -1909,123 +1909,87 @@
 
 
             <!-- ================================================================
-             SLIDE 15 — FOUR SPECKIT AGENTS
+             SLIDE 15 — FOUR COMMANDS · THREE SCENARIOS
         ================================================================ -->
             <section>
-                <div class="slide-inner" style="padding-top:36px;">
+                <div class="slide-inner" style="padding-top:24px;">
                     <div class="slide-header">
-                        <div class="eyebrow">THE COMMANDS THAT GENERATED THESE FILES</div>
-                        <h2>This Spec Was Built With Four SpecKit Agents</h2>
+                        <div class="eyebrow">THE COMMANDS · THE PATH</div>
+                        <h2>Four Commands. Three Ways to Start.</h2>
                     </div>
-                    <hr class="ds-rule" />
+                    <hr class="ds-rule" style="margin-bottom:8px;" />
 
-                    <div class="agent-grid" style="flex:1;">
+                    <!-- Four agent cards (condensed) -->
+                    <div class="agent-grid" style="gap:8px; flex:none;">
                         <!-- 01 constitution -->
-                        <div class="agent-card">
+                        <div class="agent-card" style="padding:10px 14px; gap:4px;">
                             <div class="agent-num">01</div>
                             <div class="agent-cmd">/speckit-constitution</div>
-                            <div class="agent-desc">Establish non-negotiable engineering principles: IEC 62304, determinism, @satisfies traceability, immutable audit, fail-safe, strict TypeScript.</div>
-                            <div class="agent-prompt">PROMPT: "Create governing principles for a safety-<br />critical medication alert monitor"</div>
+                            <div class="agent-desc" style="font-size:0.72rem;">Establish non-negotiable engineering principles: IEC 62304, determinism, @satisfies traceability, immutable audit, fail-safe, strict TypeScript.</div>
+                            <div class="agent-prompt" style="font-size:0.62rem; padding:6px 8px;">PROMPT: "Create governing principles for a safety-critical medication alert monitor"</div>
                             <div class="agent-output">→ .specify/memory/constitution.md</div>
                         </div>
 
                         <!-- 02 specify -->
-                        <div class="agent-card">
+                        <div class="agent-card" style="padding:10px 14px; gap:4px;">
                             <div class="agent-num">02</div>
                             <div class="agent-cmd">/speckit-specify</div>
-                            <div class="agent-desc">Describe WHAT and WHY, not the tech stack. 3 user stories, 12 requirements (REQ-001–REQ-012), state machine, success criteria.</div>
-                            <div class="agent-prompt">PROMPT: "Overdue Dose Alert with Escalation — OBJECTIVE<br />/ BEHAVIOR / CONSTRAINTS / VERIFICATION"</div>
+                            <div class="agent-desc" style="font-size:0.72rem;">Describe WHAT and WHY, not the tech stack. 3 user stories, 12 requirements (REQ-001–REQ-012), state machine, success criteria.</div>
+                            <div class="agent-prompt" style="font-size:0.62rem; padding:6px 8px;">PROMPT: "Overdue Dose Alert with Escalation — OBJECTIVE / BEHAVIOR / CONSTRAINTS / VERIFICATION"</div>
                             <div class="agent-output">→ specs/001-overdue-dose-alert/spec.md</div>
                         </div>
 
                         <!-- 03 plan -->
-                        <div class="agent-card">
+                        <div class="agent-card" style="padding:10px 14px; gap:4px;">
                             <div class="agent-num">03</div>
                             <div class="agent-cmd">/speckit-plan</div>
-                            <div class="agent-desc">TypeScript strict mode, pure functions, injected time, annotations, append-only audit. AI makes 7 architecture decisions from spec alone.</div>
-                            <div class="agent-prompt">PROMPT: "TypeScript strict mode. Node.js 20 LTS. Vitest.<br />PostgreSQL via adapter."</div>
+                            <div class="agent-desc" style="font-size:0.72rem;">TypeScript strict mode, pure functions, injected time, annotations, append-only audit. AI makes 7 architecture decisions from spec alone.</div>
+                            <div class="agent-prompt" style="font-size:0.62rem; padding:6px 8px;">PROMPT: "TypeScript strict mode. Node.js 20 LTS. Vitest. PostgreSQL via adapter."</div>
                             <div class="agent-output">→ plan.md · data-model.md · research.md</div>
                         </div>
 
                         <!-- 04 tasks -->
-                        <div class="agent-card">
+                        <div class="agent-card" style="padding:10px 14px; gap:4px;">
                             <div class="agent-num">04</div>
                             <div class="agent-cmd">/speckit-tasks</div>
-                            <div class="agent-desc">35 tasks across 6 phases: types → ports → fakes → state engine → tests (by REQ) → traceability matrix. 100% REQ coverage.</div>
-                            <div class="agent-prompt">PROMPT: "Sequence tasks as: types → state engine → test<br />suite → traceability matrix"</div>
+                            <div class="agent-desc" style="font-size:0.72rem;">35 tasks across 6 phases: types → ports → fakes → state engine → tests (by REQ) → traceability matrix. 100% REQ coverage.</div>
+                            <div class="agent-prompt" style="font-size:0.62rem; padding:6px 8px;">PROMPT: "Sequence tasks as: types → state engine → test suite → traceability matrix"</div>
                             <div class="agent-output">→ specs/001-overdue-dose-alert/tasks.md</div>
                         </div>
                     </div>
 
-                    <div class="info-bar" style="margin-top:12px;">
-                        <strong>These four commands started this repository.</strong> Every spec artifact, state engine, and test suite you see in the codebase was generated from this workflow.
-                        <div style="margin-top:6px;">For more details, view the full slide deck: <a href="https://github.com/justingrammens/OSN-2026/blob/main/slides/OSN_Spec_First_Agents_Second_FINAL.pdf" target="_blank" style="color:var(--ds-teal); text-decoration:none; font-weight:600;">github.com/justingrammens/OSN-2026 → slides/OSN_Spec_First_Agents_Second_FINAL.pdf</a></div>
-                        <div style="font-style:italic; color:var(--ds-text-dim); margin-top:2px;">Same workflow. Every time. Repeatable by design.</div>
-                    </div>
-                </div>
-            </section>
+                    <!-- Scenarios subheading -->
+                    <div style="font-size:0.62rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--ds-teal); margin:10px 0 6px;">STARTING MONDAY: THREE SCENARIOS</div>
 
-
-            <!-- ================================================================
-             SLIDE 17 — PRACTICAL PATH
-        ================================================================ -->
-            <section>
-                <div class="slide-inner" style="padding-top:38px;">
-                    <div class="slide-header">
-                        <div class="eyebrow">PRACTICAL PATH</div>
-                        <h2>Starting Monday: Three Scenarios.</h2>
-                    </div>
-                    <hr class="ds-rule" />
-
-                    <div style="flex:1; display:flex; flex-direction:column; justify-content:center; gap:0;">
+                    <!-- Three scenarios as horizontal columns -->
+                    <div class="cols-3" style="gap:10px; flex:none;">
                         <!-- Scenario 01 -->
-                        <div class="scenario-item">
-                            <div class="scenario-num">01</div>
-                            <div class="scenario-stripe"></div>
-                            <div class="scenario-body">
-                                <div class="scenario-title">NEW PROJECT</div>
-                                <div class="scenario-sub">Run all four commands before writing a single line of code.</div>
-                                <ul class="ds-bullets" style="margin:0;">
-                                    <li>specify init → claude → /speckit-constitution → /speckit-specify → /speckit-plan → /speckit-tasks</li>
-                                    <li>Then: Implement by task ID (e.g. "Implement T020 from tasks.md")</li>
-                                    <li>Result: spec, plan, tasks, implementation — all traceable from day one</li>
-                                </ul>
-                            </div>
+                        <div style="background:rgba(255,255,255,0.03); border:1px solid var(--ds-border); border-top:3px solid var(--ds-teal); border-radius:8px; padding:12px 14px;">
+                            <div style="font-size:1.4rem; font-weight:800; color:var(--ds-teal); line-height:1; margin-bottom:4px;">01</div>
+                            <div style="font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; color:var(--ds-text); margin-bottom:4px;">NEW PROJECT</div>
+                            <div style="font-size:0.7rem; color:var(--ds-text-muted); font-style:italic; margin-bottom:8px;">Run all four commands before writing a single line of code.</div>
+                            <div style="font-size:0.68rem; color:var(--ds-text-dim);">Result: spec, plan, tasks, implementation — all traceable from day one</div>
                         </div>
 
                         <!-- Scenario 02 -->
-                        <div class="scenario-item">
-                            <div class="scenario-num s2">02</div>
-                            <div class="scenario-stripe s2"></div>
-                            <div class="scenario-body">
-                                <div class="scenario-title">EXISTING PROJECT</div>
-                                <div class="scenario-sub">Pick the next feature. Run the four commands on that feature only.</div>
-                                <ul class="ds-bullets" style="margin:0;">
-                                    <li>Don't retrofit 200,000 lines — start at the next feature boundary</li>
-                                    <li>/speckit-constitution runs once per repo · /speckit-specify runs per feature</li>
-                                    <li>Result: new work is traceable · old work stays as-is · gap closes over time</li>
-                                </ul>
-                            </div>
+                        <div style="background:rgba(255,255,255,0.03); border:1px solid var(--ds-border); border-top:3px solid var(--ds-cyan); border-radius:8px; padding:12px 14px;">
+                            <div style="font-size:1.4rem; font-weight:800; color:var(--ds-cyan); line-height:1; margin-bottom:4px;">02</div>
+                            <div style="font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; color:var(--ds-text); margin-bottom:4px;">EXISTING PROJECT</div>
+                            <div style="font-size:0.7rem; color:var(--ds-text-muted); font-style:italic; margin-bottom:8px;">Pick the next feature. Run the four commands on that feature only.</div>
+                            <div style="font-size:0.68rem; color:var(--ds-text-dim);">Result: new work is traceable · old work stays as-is · gap closes over time</div>
                         </div>
 
                         <!-- Scenario 03 -->
-                        <div class="scenario-item">
-                            <div class="scenario-num s3">03</div>
-                            <div class="scenario-stripe s3"></div>
-                            <div class="scenario-body">
-                                <div class="scenario-title">TEAM ADOPTION</div>
-                                <div class="scenario-sub">Constitution goes in the repo. PR template enforces REQ-NNN.</div>
-                                <ul class="ds-bullets" style="margin:0;">
-                                    <li>Commit constitution.md to .specify/memory/ — it's a version-controlled artifact</li>
-                                    <li>Add REQ-NNN field to PR template · CI traceability check fails build if missing</li>
-                                    <li>Result: every engineer follows spec-first automatically — no manual enforcement</li>
-                                </ul>
-                            </div>
+                        <div style="background:rgba(255,255,255,0.03); border:1px solid var(--ds-border); border-top:3px solid var(--ds-green); border-radius:8px; padding:12px 14px;">
+                            <div style="font-size:1.4rem; font-weight:800; color:var(--ds-green); line-height:1; margin-bottom:4px;">03</div>
+                            <div style="font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; color:var(--ds-text); margin-bottom:4px;">TEAM ADOPTION</div>
+                            <div style="font-size:0.7rem; color:var(--ds-text-muted); font-style:italic; margin-bottom:8px;">Constitution goes in the repo. PR template enforces REQ-NNN.</div>
+                            <div style="font-size:0.68rem; color:var(--ds-text-dim);">Result: every engineer follows spec-first automatically — no manual enforcement</div>
                         </div>
                     </div>
 
-                    <div style="text-align:center; font-style:italic; font-size:0.82rem; color:var(--ds-teal); margin-top:10px;">
-                        Same four commands. Same prompts. Every time. Repeatable by design.
+                    <div class="info-bar" style="margin-top:8px; text-align:center; font-size:0.74rem;">
+                        Same four commands. Same prompts. Every time. <strong>Repeatable by design.</strong>
                     </div>
                 </div>
             </section>
